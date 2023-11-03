@@ -1,4 +1,4 @@
-# WICarduinocheetsheet
+# Basic tools
 
 ### Basic structure of a program
 ```c
@@ -33,6 +33,15 @@ void loop() {
 	//...
 }
 ```
+
+### Fixing a port error
+Go to `Tools -> Port -> COM[X] (Arduino Uno)` (where `[X]` will be some random number)
+
+### Installing the ZumoShield library
+Go to `Tools -> Manage Libraries`. Type `ZumoShield` into the search box, and click Install.
+
+### Showing line numbers
+Go to `File -> Preferences`, check the `Show line numbers` box, and click OK.
 
 # Light Functions 
 
