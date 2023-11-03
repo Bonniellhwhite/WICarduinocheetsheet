@@ -44,36 +44,62 @@ Go to `Tools -> Manage Libraries`. Type `ZumoShield` into the search box, and cl
 Go to `File -> Preferences`, check the `Show line numbers` box, and click OK.
 
 # Light Functions 
-### Headers
-in `setup(
+The light (LED) allows your robot to make signals.
+### Header file
+None needed
+
+### Required setup code
+```c
+void setup() {
 	pinMode(13, OUTPUT);
- )`
-### Built-in functions<br>
-Light on: `digitalWrite(LED_PIN,HIGH);`<br>
-Light off: `digitalWrite(LED_PIN,HIGH);`<br>
-Delay:  `delay(250)`<br>
+	//...
+}
+```
+### How to use
+Light on: `digitalWrite(LED_PIN, HIGH);`<br>
+Light off: `digitalWrite(LED_PIN, LOW);`<br>
+Delay:  `delay(250);`<br>
 
 # Motor Functions 
-### Headers<br>
-Import Library: `#include <ZumoMotors.h>`<br>
-Initialize Motors: `ZumoMotors motors;`<br>
-Global Variables: `Speed = 10`<br>
+The motors allow your robot to move.
+### Header file
+```c
+#include <ZumoMotors.h>
+```
 
-### Built-in functions<br>
-Motor on: `motors.setSpeeds(SPEED, SPEED);`<br>
-Motor off: `motors.setSpeeds(0, 0);`<br>
-Delay:  `delay(250)`<br>
-
-# Buzzer Functions 
-### Headers<br>
-Import Library: `#include <ZumoBuzzer.h>`<br>
-Initialize Motors: `ZumoBuzzer buzzer;`<br>
-Global Variables: `const int VOLUME = 15` and `const int OCTAVE = 3`<br>
+### Required setup code
+```c
+const int SPEED = 100;
+ZumoMotors motors;
+```
 
 ### Built-in functions
-Play Note: `buzzer.playNote(NOTE_G(OCTAVE), DURATION, VOLUME);`
-Note Play / Stop Duration: `delay(DURATION);`
-Stop Note: `buzzer.stopPlaying();`
+Move forwards: `motors.setSpeeds(SPEED, SPEED);`<br>
+Move backwards: `motors.setSpeeds(-SPEED, -SPEED);`<br>
+Stop moving: `motors.setSpeeds(0, 0);`<br>
+Delay:  `delay(250);`<br>
+
+# Buzzer Functions 
+The buzzer allows your robot to make sounds.
+### Header file
+```c
+#include <ZumoBuzzer.h>
+```
+
+### Required setup code
+```c
+const int VOLUME = 15;
+const int OCTAVE = 4;
+ZumoBuzzer buzzer;
+```
+
+### How to use
+```c
+const int DURATION = 250;
+buzzer.playNote(NOTE_G(OCTAVE), DURATION, VOLUME);
+delay(DURATION);
+buzzer.stopPlaying();
+```
 
 Notes listed here: https://pololu.github.io/zumo-shield-arduino-library/_pololu_buzzer_8h.html#note_macros
 
