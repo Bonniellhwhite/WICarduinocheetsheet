@@ -81,6 +81,8 @@ Move backwards: `motors.setSpeeds(-SPEED, -SPEED);`<br>
 Stop moving: `motors.setSpeeds(0, 0);`<br>
 Delay:  `delay(250);`<br>
 
+Reference link: https://pololu.github.io/zumo-shield-arduino-library/class_zumo_motors.html
+
 # Buzzer Functions 
 The buzzer allows your robot to make sounds.
 ### Header file
@@ -103,6 +105,7 @@ delay(DURATION);
 buzzer.stopPlaying();
 ```
 
+Reference link: https://pololu.github.io/zumo-shield-arduino-library/class_zumo_buzzer.html
 Notes listed here: https://pololu.github.io/zumo-shield-arduino-library/_pololu_buzzer_8h.html#note_macros
 
 # Sensor Functions 
@@ -133,6 +136,8 @@ sensors.read(values);
 int leftmostSensor = values[0];
 int rightmostSensor = values[5];
 ```
+
+Reference link: https://pololu.github.io/zumo-shield-arduino-library/class_zumo_reflectance_sensor_array.html
 
 # Debugging (Serial Monitor)
 The Serial Monitor allows you to print data to a console on your screen, much like the `print` statement in Python. You can use it to debug your code, e.g., to check the value of your sensors.
