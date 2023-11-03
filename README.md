@@ -48,27 +48,27 @@ Go to `File -> Preferences`, check the `Show line numbers` box, and click OK.
 in `setup(
 	pinMode(13, OUTPUT);
  )`
-### Built-in functions
-Light on: `digitalWrite(LED_PIN,HIGH);`
-Light off: `digitalWrite(LED_PIN,HIGH);`
-Delay:  `delay(250)`
+### Built-in functions<br>
+Light on: `digitalWrite(LED_PIN,HIGH);`<br>
+Light off: `digitalWrite(LED_PIN,HIGH);`<br>
+Delay:  `delay(250)`<br>
 
 # Motor Functions 
-### Headers
-Import Library: `#include <ZumoMotors.h>`
-Initialize Motors: `ZumoMotors motors;`
-Global Variables: `Speed = 10`
+### Headers<br>
+Import Library: `#include <ZumoMotors.h>`<br>
+Initialize Motors: `ZumoMotors motors;`<br>
+Global Variables: `Speed = 10`<br>
 
-### Built-in functions
-Motor on: `motors.setSpeeds(SPEED, SPEED);`
-Motor off: `motors.setSpeeds(0, 0);`
-Delay:  `delay(250)`
+### Built-in functions<br>
+Motor on: `motors.setSpeeds(SPEED, SPEED);`<br>
+Motor off: `motors.setSpeeds(0, 0);`<br>
+Delay:  `delay(250)`<br>
 
 # Buzzer Functions 
-### Headers
-Import Library: `#include <ZumoBuzzer.h>`
-Initialize Motors: `ZumoBuzzer buzzer;`
-Global Variables: `const int VOLUME = 15` and `const int OCTAVE = 3`
+### Headers<br>
+Import Library: `#include <ZumoBuzzer.h>`<br>
+Initialize Motors: `ZumoBuzzer buzzer;`<br>
+Global Variables: `const int VOLUME = 15` and `const int OCTAVE = 3`<br>
 
 ### Built-in functions
 Play Note: `buzzer.playNote(NOTE_G(OCTAVE), DURATION, VOLUME);`
