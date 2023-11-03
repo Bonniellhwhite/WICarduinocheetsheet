@@ -50,8 +50,10 @@ None needed
 
 ### Required setup code
 ```c
+const int LED_PIN = 13;
+
 void setup() {
-	pinMode(13, OUTPUT);
+	pinMode(LED_PIN, OUTPUT);
 	//...
 }
 ```
