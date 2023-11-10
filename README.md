@@ -1,21 +1,24 @@
 # Basic tools
 
 ### Basic structure of a program
+
+First, `#include` statements go at the very top of the file, to include libraries for the motors, buzzer, or sensor array:
 ```c
-//Include statements go first
 #include <SomeFileName.h>
 #include <SomeOtherFile.h>
+```
 
-//Second, global constants:
-const int someConstant = 0;
-const int otherConstant = 200;
-
-//Third, global variables:
+Second, global constants and global variables that can be accessed by any function:
+```c
+const int SOME_CONSTANT = 0;
+const int OTHER_CONSTANT = 200;
 int oneVar = 2;
 ZumoMotors motors;
 ZumoBuzzer buzzer;
+```
 
-//Fourth, your own functions:
+Third, your own functions:
+```c
 void doSomething() {
 	//...
 }
@@ -23,8 +26,10 @@ void doSomething() {
 void doSomethingElse() {
 	//...
 }
+```
 
-//Finally, your program's core functions
+Finally, your program's core functions:
+```c
 void setup() {
 	//put your setup code here, to run once
 }
@@ -34,14 +39,14 @@ void loop() {
 }
 ```
 
-### Fixing a port error
+### Fixing a port error ("Problem uploading to board")
 Go to `Tools -> Port -> COM[X] (Arduino Uno)` (where `[X]` will be some random number)
 
 ### Installing the ZumoShield library
 Go to `Tools -> Manage Libraries`. Type `ZumoShield` into the search box, and click Install.
 
 ### Showing line numbers
-Go to `File -> Preferences`, check the `Show line numbers` box, and click OK.
+Go to `File -> Preferences`, check the `Display line numbers` box, and click OK.
 
 # Light Functions 
 The light (LED) allows your robot to make signals.
@@ -105,7 +110,7 @@ delay(DURATION);
 buzzer.stopPlaying();
 ```
 
-Reference link: https://pololu.github.io/zumo-shield-arduino-library/class_zumo_buzzer.html
+Reference link: https://pololu.github.io/zumo-shield-arduino-library/class_zumo_buzzer.html <br>
 Notes listed here: https://pololu.github.io/zumo-shield-arduino-library/_pololu_buzzer_8h.html#note_macros
 
 # Sensor Functions 
